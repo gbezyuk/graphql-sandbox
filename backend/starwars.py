@@ -11,13 +11,15 @@ class Episode(graphene.Enum):
             return 'New Hope Episode'
         return 'Other episode'
 
-# alternative syntax is as follows:
+# Alternative syntax is as follows:
 # Episode = graphene.Enum('Episode', [('NEWHOPE', 4), ('EMPIRE', 5), ('JEDI', 6)])
-
-# one can use python enums too:
+#
+# One can use python enums too:
 # graphene.Enum.from_enum(AlreadyExistingPyEnum)
-# see https://docs.python.org/3/library/enum.html
-# actually, as official docs say, quote:
+# (see https://docs.python.org/3/library/enum.html)
+#
+# Actually, as official docs say, quote:
 # "graphene.Enum uses enum.Enum internally (or a backport if that’s not available)
 # and can be used in the exact same way.
+# (see http://docs.graphene-python.org/en/latest/types/enums/)
 
