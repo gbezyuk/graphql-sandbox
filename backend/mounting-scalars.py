@@ -16,3 +16,5 @@ class Character(graphene.ObjectType):
 
 #   Is equivalent to:
 #   name = graphene.NonNull(graphene.String)
+
+    appears_in = graphene.List(graphene.String)
