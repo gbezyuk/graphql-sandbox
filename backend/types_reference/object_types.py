@@ -21,4 +21,11 @@ type Person {
   lastName: String
   fullName: String
 }
+
+Graphene ObjectTypes can act as containers too. So with the previous example you could do:
+
+peter = Person(first_name='Peter', last_name='Griffin')
+
+peter.first_name # prints "Peter"
+peter.last_name # prints "Griffin"
 """
