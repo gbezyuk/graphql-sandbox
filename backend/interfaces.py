@@ -16,3 +16,21 @@ class Droid(graphene.ObjectType):
         interfaces = (Character, )
 
     function = graphene.String()
+
+"""
+The above types have the following representation in a schema:
+
+interface Character {
+  name: String
+}
+
+type Droid implements Character {
+  name: String
+  function: String
+}
+
+type Human implements Character {
+  name: String
+  bornIn: String
+}
+"""
