@@ -1,9 +1,10 @@
 import graphene
 
 
-class Query(graphene.ObjectType):
-    reverse = graphene.String(word=graphene.String())
+def reverse(root, args, context, info):
+    word = args.get('word')
+    return word[::-1]
 
-    def resolve_reverse(self, args, context, info):
-        word = args.get('word')
-        return word[::-1]
+
+class Query(graphene.ObjectType):
+    reverse = graphene.String(word=graphene.String(), resolver=reverse)
