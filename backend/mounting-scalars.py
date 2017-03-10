@@ -1,5 +1,5 @@
 class Person(graphene.ObjectType):
-    name = graphene.String()
+    name = graphene.String(required=True)
 
 # Is equivalent to:
 # class Person(graphene.ObjectType):
@@ -10,4 +10,5 @@ class Person(graphene.ObjectType):
 # graphene.Field(graphene.String, to=graphene.Argument(graphene.String))
 # (?) @gbezyuk
 
-
+class Character(graphene.ObjectType):
+    name = graphene.NonNull(graphene.String)
