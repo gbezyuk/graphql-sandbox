@@ -9,6 +9,9 @@ class Person(graphene.ObjectType):
     def resolve_full_name(self, args, context, info):
         return '{} {}'.format(self.first_name, self.last_name)
 
+#   there's a way to trick auto_camelcase locally, BTW — use `name`
+#   other_name = graphene.String(name='_other_Name') 
+
 
 """
 `first_name` and `last_name` are fields of the `ObjectType`.
